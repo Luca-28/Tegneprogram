@@ -1,8 +1,11 @@
 int CurrentColour = 1;
 int CurrentShape = 1;
-int DrawSize = 1;
+
+boolean Drawing = false;
+int DrawSize = 0;
 
 void setup(){
+ clear();
  size(1000,1000);
  frameRate(120);
  noStroke();
@@ -20,12 +23,18 @@ void keyPressed(){
 }
 
 void draw(){
-  background(50);
+  if(Drawing == true){
+    DrawShape();
+    DrawSize++;
+  } else {
+    DrawSize = 0;
+  }
   DrawHUD();
 }
 
 void mousePressed(){
-  
-  DrawShape();
-  
+  Drawing = true;
+}
+void mouseReleased(){
+  Drawing = false;
 }
