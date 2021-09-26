@@ -39,7 +39,7 @@ void DrawHUD(){  //Draws The HUD-elements
   
   fill(255);  //Shows the tooltips
   textSize(20);
-  text("Click to draw",450,80);
+  text("Click to draw - Hold to increase size",450,80);
   text("Press 'SPACEBAR' to change colour",450,20);
   text("Press 'C' to change shape",450,40);
   text("Press 'R' to clear drawing",450,60);

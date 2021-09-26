@@ -5,7 +5,7 @@ boolean Drawing = false;
 int DrawSize = 0;
 
 void setup(){
- clear();
+ background(50);
  size(1000,1000);
  frameRate(120);
  noStroke();
@@ -19,6 +19,7 @@ void keyPressed(){
     CycleShape();
   } else if(key == 'r' || key == 'R'){
     clear();
+    background(50);
   }
 }
 
